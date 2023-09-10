@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
 
-@WebServlet(name = "SignInServlet", value = "/auth/login")
+@WebServlet(name = "SignInServlet", value = "/auth/signIn")
 public class SignInServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -49,7 +49,7 @@ public class SignInServlet extends HttpServlet {
             req.setAttribute("user", userDTO);
             req.setAttribute("errors", errors);
             req.setAttribute("mode", "signIn");
-            req.getRequestDispatcher("/WEB-INF/auth/signForm.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/auth/login.jsp").forward(req, resp);
         }
     }
 }

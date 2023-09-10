@@ -6,12 +6,9 @@ public class Book {
     private String publicationType;
     private String publicationDate;
     private String editor;
-    private Long isbn;
+    private String isbn;
 
-    public Book(){
-    }
-
-    public Book(String title, String author, String publicationType, String publicationDate, String editor, Long isbn) {
+    public Book(String title, String author, String publicationType, String publicationDate, String editor, String isbn){
         this.title = title;
         this.author = author;
         this.publicationType = publicationType;
@@ -19,6 +16,7 @@ public class Book {
         this.editor = editor;
         this.isbn = isbn;
     }
+
 
     public String getTitle() {
         return title;
@@ -60,11 +58,11 @@ public class Book {
         this.editor = editor;
     }
 
-    public Long getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(Long isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 }

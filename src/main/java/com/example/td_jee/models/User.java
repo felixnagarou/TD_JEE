@@ -12,8 +12,8 @@ public class User {
         this.id = ++count;
     }
 
-    public User(Long id, String username, String password, String mail) {
-        this.id = id;
+    public User(String username, String password, String mail) {
+        this.id = ++count;
         this.username = username;
         this.password = password;
         this.mail = mail;
