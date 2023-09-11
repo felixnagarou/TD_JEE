@@ -17,6 +17,15 @@ public class BookDTO {
         this.isbn = "";
     }
 
+    public BookDTO(String title, String author, String publicationType, String publicationDate, String editor, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.publicationType = publicationType;
+        this.publicationDate = publicationDate;
+        this.editor = editor;
+        this.isbn = isbn;
+    }
+
     public String getTitle() {
         return title;
     }
