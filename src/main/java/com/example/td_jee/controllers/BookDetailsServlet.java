@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
 
-@WebServlet(name = "BookDetailServlet", value = "session/favorites")
+@WebServlet(name = "BookDetailServlet", value = "/session/favorites")
 public class BookDetailsServlet extends HttpServlet {
 
     @Override
@@ -34,7 +34,7 @@ public class BookDetailsServlet extends HttpServlet {
             );
             req.setAttribute("book", bookDTO);
             req.setAttribute("mode", "consultFavBooks");
-            req.getRequestDispatcher("/WEB-INF/session/bookManagement.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/session/favoriteBooks").forward(req, resp);
         } else {
             req.setAttribute("mode", "showAll");
             resp.sendRedirect(req.getContextPath() + "/sessions/favoriteBooks");
