@@ -22,8 +22,9 @@ public class SignUpServlet extends HttpServlet {
 
         req.setAttribute("user", userDTO);
         req.setAttribute("mode", "signUp");
+        req.setAttribute("errors", errors);
 
-        req.getRequestDispatcher("/WEB-INF/auth/login.jsp");
+        req.getRequestDispatcher("/WEB-INF/auth/login.jsp").forward(req, resp);
     }
 
     @Override
@@ -40,7 +41,7 @@ public class SignUpServlet extends HttpServlet {
             User user = new User(username, password, email);
             FakeDB.userList.add(user);
             req.getSession().setAttribute("user", user);
-            resp.sendRedirect(req.getContextPath() + "/session/bookManagement");
+            resp.sendRedirect(req.getContextPath() + "/session/addBook");
         } else {
             errors.add("Not Disponible.");
             UserDTO userDTO = new UserDTO();

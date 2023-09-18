@@ -24,7 +24,7 @@ public class BookFormServlet extends HttpServlet {
         req.setAttribute("errors", errors);
         req.setAttribute("mode", "addBook");
 
-        req.getRequestDispatcher("/WEB-INF/session/bookManagement.jsp");
+        req.getRequestDispatcher("/WEB-INF/session/bookManagement.jsp").forward(req, resp);
     }
 
     @Override

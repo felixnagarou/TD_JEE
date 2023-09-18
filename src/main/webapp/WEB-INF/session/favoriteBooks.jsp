@@ -6,6 +6,7 @@
   Time: 16:16
   To change this template use File | Settings | File Templates.
 --%>
+<jsp:useBean id="errors" type="java.util.List<java.lang.String>" scope="request"/>
 <jsp:useBean id="mode" type="java.lang.String" scope="request" />
 <jsp:useBean id="bookList" type="java.util.ArrayList<com.example.td_jee.data.FakeDB>" scope="request" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

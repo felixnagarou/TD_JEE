@@ -39,7 +39,7 @@ public class SignInServlet extends HttpServlet {
 
         if (foundUser.isPresent()){
             req.getSession().setAttribute("user", foundUser.get());
-            resp.sendRedirect(req.getContextPath() + "/session/bookManagement");
+            resp.sendRedirect(req.getContextPath() + "/session/addBook");
         } else {
             errors.add("logs are invalid, please enter correct credentials");
             UserDTO userDTO = new UserDTO();

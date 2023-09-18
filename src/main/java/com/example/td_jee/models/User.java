@@ -1,5 +1,7 @@
 package com.example.td_jee.models;
 
+import java.util.List;
+
 public class User {
 
     public static Long count=0L;
@@ -7,6 +9,8 @@ public class User {
     private String username;
     private String password;
     private String mail;
+
+    private List<Book> userFavorites;
 
     public User(){
         this.id = ++count;
@@ -46,4 +50,6 @@ public class User {
     public void setMail(String mail) {
         this.mail = mail;
     }
+
+    public List<Book> getUserFavorites(){return userFavorites;}
 }

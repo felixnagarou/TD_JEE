@@ -5,6 +5,7 @@
   Time: 16:15
   To change this template use File | Settings | File Templates.
 --%>
+<jsp:useBean id="errors" type="java.util.List<java.lang.String>" scope="request"/>
 <jsp:useBean id="mode" type="java.lang.String" scope="request" />
 <jsp:useBean id="user" type ="com.example.td_jee.models.UserDTO" scope = "request"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
