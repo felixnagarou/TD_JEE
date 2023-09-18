@@ -37,7 +37,7 @@ public class BookDetailsServlet extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/session/favoriteBooks").forward(req, resp);
         } else {
             req.setAttribute("mode", "showAll");
-            resp.sendRedirect(req.getContextPath() + "/sessions/favoriteBooks");
+            resp.sendRedirect(req.getContextPath() + "/session/favoriteBooks");
         }
 
 

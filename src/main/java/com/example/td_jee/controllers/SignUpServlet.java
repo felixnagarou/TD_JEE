@@ -34,7 +34,7 @@ public class SignUpServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        Optional<User> foundUser = FakeDB.userList.stream().filter(u -> (u.getMail().equals(email) || u.getUsername().equals(username)) && u.getPassword().equals(password)).findFirst();
+        Optional<User> foundUser = FakeDB.userList.stream().filter(u -> (u.getMail().equals(email) && u.getUsername().equals(username)) && u.getPassword().equals(password)).findFirst();
 
         if (!foundUser.isPresent()) {
             User user = new User(username, password, email);
@@ -52,7 +52,7 @@ public class SignUpServlet extends HttpServlet {
             req.setAttribute("errors", errors);
             req.setAttribute("mode", "signUp");
 
-            req.getRequestDispatcher("WEB-INF/auth/login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/auth/login.jsp").forward(req, resp);
         }
     }
 }

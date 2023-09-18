@@ -17,6 +17,7 @@
 <main class="container">
 
     <form action="" method="post">
+
         <div>
             <label for="username">Username : </label>
             <input type="text" name = "username" id="username" value="<%user.getUsername(); %>">

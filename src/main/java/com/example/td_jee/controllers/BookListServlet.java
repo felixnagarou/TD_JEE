@@ -18,4 +18,5 @@ public class BookListServlet extends HttpServlet {
         req.setAttribute("bookList", FakeDB.bookList);
         req.getRequestDispatcher("/WEB-INF/session/favoriteBooks.jsp").forward(req, resp);
     }
+
 }
